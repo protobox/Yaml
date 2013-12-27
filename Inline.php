@@ -130,6 +130,8 @@ class Inline
                 }
 
                 return $repr;
+            case '[]' === $value:
+                return '[ ]';
             case Escaper::requiresDoubleQuoting($value):
                 return Escaper::escapeWithDoubleQuotes($value);
             case Escaper::requiresSingleQuoting($value):
